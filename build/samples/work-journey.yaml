@@ -1,0 +1,33 @@
+id: work-journey
+title: Journey to Work
+description: Getting to work
+steps:
+  root:
+    text: How is the weather?
+    connections:
+      - dstId: bus
+        text: rain
+      - dstId: sun
+        text: sun
+      - dstId: cloud
+        text: cloud
+  cloud:
+    text: hungry?
+    connections:
+      - dstId: walk
+        text: yes
+      - dstId: bus
+        text: no
+  sun:
+    text: how much time do I have
+    connections:
+      - dstId: walk
+        text: less than 30 minutes
+      - dstId: bus
+        text: more than 30 minutes
+
+  walk:
+    text: walk to work
+
+  bus:
+    text: take the bus

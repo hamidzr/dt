@@ -1,0 +1,15 @@
+id: cat
+title: Cat
+description: my cat's thought process
+steps:
+  root:
+    text: Is that for me?
+    connections:
+      - dstId: noCare
+        text: yes
+      - dstId: youWrong
+        text: no.
+  noCare:
+    text: I don't want it.
+  youWrong:
+    text: That's for me.

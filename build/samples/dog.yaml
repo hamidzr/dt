@@ -1,0 +1,36 @@
+id: dog
+title: Dogs and Anything
+description: How my dog reacts to objects.
+steps:
+  root:
+    text: is that food?
+    connections:
+      - dstId: eat
+        text: yes
+      - dstId: alsoEat
+        text: No
+  eat:
+    text: Eat it
+    connections:
+      - dstId: qFeelBad
+  alsoEat:
+    text: Eat it anyway.
+    connections:
+      - dstId: qFeelBad
+  qFeelBad:
+    text: Do I feel bad?
+    connections:
+      - dstId: throwUp
+        text: yes
+      - dstId: continueEating
+        text: no
+
+  continueEating:
+    text: keep eating
+    connections:
+      - dstId: qFeelBad
+
+  throwUp:
+    text: throw it up
+    connections:
+      - dstId: root
