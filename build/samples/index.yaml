@@ -1,3 +1,4 @@
 - path: /samples/cat.yaml
 - path: /samples/dog.yaml
 - path: /samples/work-journey.yaml
+- path: /samples/router-reset.yaml

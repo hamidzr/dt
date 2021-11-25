@@ -1,0 +1,36 @@
+id: router-reset
+title: Router/Internet Issues
+description: Are you having internet issues and you think it's your router?
+steps:
+  root:
+    text: Have you tried turning it on and off?
+    connections:
+      - dstId: talkTech
+        text: yes
+      - dstId: restart
+        text: no
+  restart:
+    text: Turn it on and off.
+    connections:
+      - dstId: root
+        text: Ok
+  talkTech:
+    text: Talk to tech support.
+    connections:
+      - dstId: reset
+        text: Ok
+  reset:
+    text: Did someone tell you to reset the router?
+    connections:
+      - dstId: noReset
+        text: Yes
+      - dstId: talkTech
+        text: No
+  noReset:
+    text: Do NOT reset the router. Did they insist you reset the router?
+    connections:
+      - dstId: restart
+        text: Yes
+      - dstId: talkTech
+        text: No
+
